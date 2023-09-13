@@ -25,7 +25,7 @@ export class ResContrasenaPage implements OnInit {
     }else if(e.value.reest_password == "" || e.value.reest_password == undefined){
       this.global.loadToast("Ingrese contraseña");
     }else if(e.value.reest_reespassword == "" || e.value.reest_reespassword == undefined){
-      this.global.loadToast("Ingrese contraseña nuevamente");
+      this.global.loadToast("Ingrese la nueva contraseña nuevamente");
     }else{
       let url="/home";
       let url_withparameter="/home?usuario="+e.value.login_usuario+"&contraseña"+e.value.login_password;
