@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center ">RegisTrapp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="d-flex ion-align-items-center ion-justify-content-center w-100 h-100">
+    <ion-card class="">
+      <ion-row>
+        <ion-col class="ion-text-center ion-padding-top">
+        </ion-col>
+      </ion-row>
+      
+      <ion-card-header>
+        <ion-card-title class="ion-text-center login-tittle"><h1>Bienvenido,{{req_usuario}} </h1></ion-card-title>  
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <form #form="ngForm">
+              <ion-list>
+                
+ <!--<ion-button (click)="this.global.loadToast()">prueba de alerta</ion-button>  -->             
+              </ion-list>
+            </form> 
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+
+    </ion-card>
+  </ion-grid>
+   
+</ion-content>

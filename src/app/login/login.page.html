@@ -1,0 +1,57 @@
+<ion-content class="theme-gray">
+  <ion-grid class="d-flex ion-align-items-center ion-justify-content-center w-100 h-100">
+    <ion-card class="">
+      <ion-row>
+        <ion-col class="ion-text-center ion-padding-top">
+        </ion-col>
+      </ion-row>
+
+      <ion-card-header>
+        <ion-card-title class="ion-text-center login-tittle">RegisTrapp</ion-card-title>  
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <form #form="ngForm">
+              <ion-list>
+
+                <ion-item fill="outline" class="ion-margin-top">
+                  <ion-label position="floating">Usuario</ion-label>
+                  <ion-input placeholder=" Ingrese Usuario" 
+                             [clearInput]="true" 
+                             required="required"
+                             name="login_usuario"
+                             [ngModel]="login_usuario"
+                             (click)="this.global.loadToast()"></ion-input>
+                </ion-item>
+
+                <ion-item fill="outline" class="ion-margin-top">
+                  <ion-label position="floating">Contrasena</ion-label>
+                  <ion-input placeholder="Ingrese Contaseña" 
+                             type="password"
+                             required="required"
+                             name="login_password"
+                             [ngModel]="login_password"></ion-input>
+                </ion-item>
+
+                <a [routerLink]="['/res-contrasena']" style="color:#101093" position="floating" class="ion-margin-top">olvidaste tu contraseña?</a>
+
+                <ion-button class="ion-margin-top" 
+                            expand="block"
+                            type="submit"
+                            (click)="loginform(form)"
+                             >Entrar
+                </ion-button>
+                 
+        <!--[disabled]="!form.valid"--->         
+
+              </ion-list>
+            </form>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
+</ion-content>
+

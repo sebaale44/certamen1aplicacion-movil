@@ -1,0 +1,60 @@
+<ion-content class="theme-gray">
+  <ion-grid class="d-flex ion-align-items-center ion-justify-content-center w-100 h-100">
+    <ion-card class="">
+      <ion-row>
+        <ion-col class="ion-text-center ion-padding-top">
+        </ion-col>
+      </ion-row>
+      
+      <ion-card-header>
+        <ion-card-title class="ion-text-center login-tittle">RegisTrapp</ion-card-title>  
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <form #form="ngForm">
+              <ion-list>
+                <ion-item fill="outline" class="ion-margin-top">
+                  <ion-label position="floating">Usuario</ion-label>
+                  <ion-input placeholder=" Ingrese Usuario" 
+                             [clearInput]="true" 
+                             required="required"
+                             name="reest_usuario"
+                             [ngModel]="reest_usuario"></ion-input>
+                </ion-item>
+
+                <ion-item fill="outline" class="ion-margin-top">
+                  <ion-label position="floating">Contrasena</ion-label>
+                  <ion-input placeholder="Ingrese Contaseña" 
+                             type="password"
+                             required="required"
+                             name="reest_password"
+                             [ngModel]="reest_password"></ion-input>
+                </ion-item>
+
+                <ion-item fill="outline" class="ion-margin-top">
+                  <ion-label position="floating">Nueva Contraseña</ion-label>
+                  <ion-input placeholder="Ingrese Contaseña nuevamente" 
+                             type="password"
+                             required="required"
+                             name="reest_reespassword"
+                             [ngModel]="reest_reespassword"></ion-input>
+                </ion-item>
+
+                <ion-button class="ion-margin-top" 
+                            expand="block"
+                            type="submit"
+                            (click)="guardarform(form)" 
+                            >Guardar
+                </ion-button>
+                
+              </ion-list>
+            </form>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+
+    </ion-card>
+  </ion-grid>
+</ion-content>
