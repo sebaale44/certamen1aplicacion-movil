@@ -29,4 +29,9 @@ export class MenuPage implements OnInit {
   ngOnInit() {
   }
 
+  volvermenu(e:any){
+    let url="/home";
+      let url_withparameter="/home?usuario="+e.value.login_usuario+"&contraseña"+e.value.login_password;
+      this.router.navigateByUrl(url_withparameter);
+  }
 }
